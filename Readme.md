@@ -1,6 +1,8 @@
 # Conway's Game of Life
-The Game of Life is a cellular automata algorithm created by legend mathematician John Conway (RIP 2020)
-Even though Dr. Conway hated all the attention given to his automata, it's still very cool to watch and very easy to code.
+The Game of Life is a cellular automata algorithm created by legend mathematician John Conway `RIP 2020`
+Even though Dr. Conway hated all the attention given to his automata, it's very cool to watch and very easy to code.
+
+![Game of Life](demo/conway_gol.gif)
 
 ---
 
@@ -16,11 +18,10 @@ According to the source of humanity's knowledge a.k.a. Wikipedia the rules to th
 
 For some very simple initial conditions, the algorithm can generate very complex patterns. Here is an [amazing presentation published by the MIT](http://web.mit.edu/sp.268/www/2010/lifeSlides.pdf) which will give you more insight into why this algorithm is called the _Game of Life_.
 
-![Game of Life](demo/conway_gol.gif)
-
-<img style="float: left; margin-right: 20px " src="demo/glider_gun.gif">
 
 ### The Game of Life is... what is life?
+
+<img style="float: left; margin-right: 20px " src="demo/glider_gun.gif">
 
 _It is not immediately obvious whether a given initial Life pattern can grow indefinitely, or whether any pattern at all can.
 Conway offered a $50.00 prize to whoever could setlle this question. In 1970 an MIT group headed by R.W. Gosper won the prize by finding the __Glider Gun__ (shown left) that emits a new glider every 30 generations. Since the gliders are not destroyed, and the gun produces a new glider every 30 generations indefinitely, the pattern grows forever, and thus proves that there can exist initial Life patterns that grow infinitely._
