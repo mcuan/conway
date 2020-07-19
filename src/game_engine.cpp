@@ -29,6 +29,10 @@ bool GameEngine::OnUserUpdate(float fElapsedTime) {
         refreshScene();
     }
 
+    if(GetKey(olc::Key::Q).bReleased) {
+        return false;
+    }
+
     if (!running) {
         if(GetMouse(0).bReleased) {
             conway.world[mouse_y][mouse_x]->toggleAlive();

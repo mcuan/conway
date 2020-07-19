@@ -4,11 +4,8 @@
 #include "olcPixelGameEngine.h"
 #include "conway.hpp"
 
-static constexpr int SCREEN_WIDTH = 1280;
-static constexpr int SCREEN_HEIGHT = 720;
-
 static constexpr int PIXEL_SIZE = 1;
-static constexpr int SCALE_FACTOR = 5;
+static constexpr int SCALE_FACTOR = 10;
 
 class GameEngine : public olc::PixelGameEngine {
   public:

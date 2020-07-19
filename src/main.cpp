@@ -1,10 +1,25 @@
 #include "game_engine.hpp"
 
+static constexpr int NUM_OF_ARGS = 3;
+
 int main(int argc, char* argv[]) {
 
-    GameEngine game(SCREEN_WIDTH/SCALE_FACTOR, SCREEN_HEIGHT/SCALE_FACTOR);
+    if (argc < NUM_OF_ARGS) {
+        std::cout << "Please specify number of rows and columns"
+            << "\nUsage: conway ROWS COLS\n";
+            return -1;
+    }
 
-    if (game.Construct(SCREEN_WIDTH, SCREEN_HEIGHT, PIXEL_SIZE, PIXEL_SIZE)) {
+    int rows = std::stoi(argv[1]);
+    int cols = std::stoi(argv[2]);
+
+    int px_height = rows*SCALE_FACTOR;
+    int px_width = cols*SCALE_FACTOR;
+
+    GameEngine game(cols, rows);
+    
+    if (game.Construct(px_width, px_height, PIXEL_SIZE, PIXEL_SIZE)) {
+        std::cout << "Creating " << px_width*PIXEL_SIZE << "x" << px_height*PIXEL_SIZE << " px window" << std::endl;
         game.Start();
     }
 
